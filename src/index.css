@@ -1,0 +1,307 @@
+@import "tailwindcss";
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #0e0e0e;
+}
+
+
+span{
+  font-family: "Anton SC", sans-serif;
+  
+}
+
+nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 18px 20px;
+}
+
+
+
+.btn {
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  color: rgb(230, 72, 203);
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 40px;
+}
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(15, 3, 29);
+  left: 0;
+  top: 0;
+  border-radius: 40px;
+}
+.btn::before {
+  content: "";
+  background: linear-gradient(
+      45deg,
+      #7FFF00, #FB33DB, #DC0073, #F5B700,
+      #008BF8, #9201CB, #01FFF4, #7CFF01
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  
+  transition: opacity .3s ease-in-out;
+  border-radius: 30px;
+  opacity: 1;
+
+}
+@keyframes glowing {
+  0% {background-position: 0 0 ;}
+  50% {background-position: 400% 0 ;}
+  100% {background-position: 0 0 ;}
+}
+
+/*Hover*/
+.btn:hover::before {
+  opacity: 1;
+
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:active {
+  color: #000;
+  
+}
+
+h2{
+  font-family: 'Anton SC';
+  font-size: 3em;
+  text-align: center;
+  padding: 0.5em;
+}
+
+h1{
+  font-family: 'Anton SC';
+}
+
+.hero-container{
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 200px;
+  position: absolute;
+ background-color: #7FFF00;
+  height: 500px;
+  width: 90%;
+  overflow: hidden;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, transparent, rgb(24, 3, 71)),
+  url(../src/Images/StockCake-Roller\ Disco\ Night_1730136918.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0 20px 5px #006dd360;
+  
+}
+
+
+
+.event-container{
+  position: relative;
+  top: 25%;
+  left: 50%;
+  height: 80%;
+  max-width: 70%;
+  transform: translateX(-50%);
+  margin: 10px;
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+  align-self: flex-end;
+  align-items: flex-end;
+  background-color: #d3ee39;
+  border-radius: 20px;
+  border: 3px solid #ff0080
+  
+}
+
+.events{
+  position: relative;
+  top: 5%;
+  padding: 20px 30px;
+  background-color: #d3ee39;
+  border-radius: 15px;
+  
+
+}
+
+.eventimg{
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px;
+  width: 400px;
+  height: 400px;
+  min-width: 300px;
+  min-height: 300px;
+  border-radius: 20px;
+}
+
+.event-info{
+  position: relative;
+  max-width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: padding10px;
+  color: rgb(59, 0, 52);
+  font-weight: bold;
+  line-height: 1.5em;
+  
+
+}
+
+#event-container .btn {
+  padding: 3px;
+}
+
+.event-info-container{
+  position: relative;
+  width: 90%;
+  height: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  
+}
+
+.event-name{
+  position: relative;
+  top: 5%;
+  padding: 10px;
+  
+}
+
+.event-button{
+  position: relative;
+  left: 50%;
+  margin: 10px;
+  transform: translateX(-50%);
+  font-size: 0.5;
+  padding: 5px;
+  color: yellowgreen
+}
+
+
+.writing-inst{
+  position: absolute;
+  top: 0%;
+  color: #DC0073;
+}
+
+.slides-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  position: relative; 
+  height: 30%;
+  max-width: 70%;
+  height: 70vh; 
+  margin: auto; 
+ 
+}
+
+.mySlides {
+  position: relative;
+  top: 15%;
+  height: 500px;
+  width: 450px; 
+  border: 2px solid aquamarine;
+  border-radius: 20px;
+  text-align: center; 
+  
+}
+
+.instructor-img {
+  position: relative;
+  width: 100%; 
+  height: 100%; 
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-btns {
+  position: absolute;
+  font-size: 5em;
+  color:#DC0073;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); 
+  cursor: pointer;
+}
+
+#back-btn {
+  left: 15%; 
+  
+}
+
+#for-btn {
+  right: 15%; 
+}
+
+#back-btn:hover{
+  border-radius: 20px;
+  background-color: #8dfff72a;
+  color:#da2181;
+  
+}
+
+#for-btn:hover{
+  border-radius: 20px;
+  background-color: #8dfff72a;
+  color:#da2181;
+}
+
+#back-btn:active{
+  color:#d17ca8;
+}
+
+#for-btn:active{
+  color:#d17ca8;
+}
+
+h4{
+  font-family: 'Anton SC';
+  font-size: 2em;
+  padding: 5%;
+}
+
+.inst-info{
+  position: relative;
+  width: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #01FFF4;
+  padding: 2%;
+}
+
+h5{
+  font-family: 'Anton SC';
+}

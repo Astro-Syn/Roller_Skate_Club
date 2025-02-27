@@ -305,3 +305,76 @@ h4{
 h5{
   font-family: 'Anton SC';
 }
+
+
+/*Mobile*/
+@media only screen and (max-width: 600px) {
+  #back-btn {
+    left: 1%; 
+    bottom: 50%;
+    
+  }
+  
+  #for-btn {
+    right: 1%; 
+    bottom: 50%;
+  }
+
+  .event-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+  
+  .events{
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #d3ee39;
+    border-radius: 15px;
+    padding: 15px; 
+    
+  
+  }
+  
+  .eventimg{
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin-bottom: 10px;
+  }
+  
+  .event-info{
+   text-align: center;
+   width: 100%;
+   
+  }
+  
+  #event-container .btn {
+    padding: 3px;
+  }
+  
+  .event-info-container{
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .event-name{
+   margin-bottom: 10px;
+    
+  }
+  
+  .event-button{
+    margin-top: 10px;
+    padding: 10px 20px;
+  }
+
+  .nav-btns{
+    margin: 10px;
+  }
+
+  
+}

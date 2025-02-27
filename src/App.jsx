@@ -7,6 +7,7 @@ import Home from './routes/Home'
 import Instructors from './routes/Instructors'
 import Events from './routes/Events'
 import Contact from './routes/Contact'
+import Footer from './components/Footer'
 
 function App() {
  
@@ -24,7 +25,7 @@ function App() {
             <Route path='/contact' exact element={< Contact/>}></Route>
          </Routes>
         </Router>
-
+        <Footer/>
       </div>
     </>
   )
